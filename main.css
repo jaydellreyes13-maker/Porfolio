@@ -1,0 +1,104 @@
+:root{
+    --dark-bg:#0d1128;
+    --accent:#ff4d5a;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--dark-bg);
+    color:#fff;
+    padding-bottom:40px;
+}
+
+.navbar{
+    background:var(--dark-bg);
+}
+
+.nav-link{
+    color:#fff!important;
+    margin-right:1rem;
+}
+
+.nav-link:hover{
+    color:var(--accent)!important;
+}
+
+.logo{
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.hero::after{
+    content:"Jaydell T. Reyes";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:20rem;
+    font-weight:700;
+    opacity:.03;
+    white-space:nowrap;
+    pointer-events:none;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    border:1px solid var(--accent);
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-right:.5rem;
+    color:#fff;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.social-icons a:hover{
+    background:var(--accent);
+}
+
+.btn-outline-accent{
+    border:2px solid var(--accent);
+    color:#fff;
+    padding:.75rem 2rem;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+.btn-outline-accent:hover{
+    background:var(--accent);
+}
+
+.education-card{
+    background:#13183a;
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.education-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--accent);
+}
+
+@media(max-width:992px){
+    .hero::after{font-size:12rem;}
+}
+
+@media(max-width:576px){
+    .hero::after{display:none;}
+}
